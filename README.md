@@ -46,6 +46,7 @@ INSTALLED_APPS = PROJECT_APPS + [
 ```
 
 ```bash
+$ touch "apps.txt"
 $ python manage.py find_apps > "apps.txt"
 ```
 

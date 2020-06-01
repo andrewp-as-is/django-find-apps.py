@@ -19,11 +19,13 @@ APPS_DIRS = [
     'admin',
     'apps',
     'models',
-    'management/commands',
     'templatetags'
 ]
 
 def isapp(path):
+    path = os.path.join(path,'management','commands')
+    if os.path.exists(path):
+        return os.path.join(path)
     if not os.path.exists(os.path.join(path, '__init__.py')):
         return False
     for app_file in APPS_FILES:
@@ -31,8 +33,8 @@ def isapp(path):
         if os.path.exists(fullpath) and os.path.isfile(fullpath):
             return True
     for app_dir in APPS_DIRS:
-        fullpath = os.path.join(path, app_dir)
-        if os.path.exists(fullpath) and os.path.isdir(fullpath):
+        fullpath = os.path.join(path, app_dir, '__init__.py')
+        if os.path.exists(fullpath) and os.path.isfile(fullpath):
             return True
 
 def find_package_dirs(path):
@@ -48,15 +50,9 @@ def find_package_dirs(path):
 @public.add
 def find_apps(path):
     """return a list of apps"""
-    if not path:
-        raise ValueError('invalid path: %s' % path)
-    if path and path[0]=='/':
-        raise ValueError('absolute path not allowed: %s' % path)
+    path = os.path.abspath(path)
     apps = []
     for _dir in filter(isapp,find_package_dirs(path)):
         relpath = os.path.relpath(_dir, path)
-        if path in ['.','./']:
-            apps.append(relpath.replace(os.path.sep, '.'))
-        else:
-            apps.append(path+'.'+relpath.replace(os.path.sep, '.'))
+        apps.append('.'.join(relpath.split(os.sep)))
     return apps

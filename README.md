@@ -1,7 +1,6 @@
 <!--
 https://pypi.org/project/readme-generator/
 https://pypi.org/project/python-readme-generator/
-https://pypi.org/project/django-readme-generator/
 -->
 
 [![](https://img.shields.io/pypi/pyversions/django-find-apps.svg?longCache=True)](https://pypi.org/project/django-find-apps/)
@@ -14,17 +13,12 @@ https://pypi.org/project/django-readme-generator/
 $ [sudo] pip install django-find-apps
 ```
 
-#### Functions
-function|`__doc__`
--|-
-`django_find_apps.find_apps(path)` |return a list of apps
-
 #### Examples
 `settings.py`
 ```python
 import django_find_apps
 
-INSTALLED_APPS = django_find_apps.find_apps("apps")
+INSTALLED_APPS = django_find_apps.find_apps(".")
 ```
 
 ```
@@ -41,5 +35,5 @@ apps
 ```
 
 <p align="center">
-    <a href="https://pypi.org/project/django-readme-generator/">django-readme-generator</a>
+    <a href="https://pypi.org/project/python-readme-generator/">python-readme-generator</a>
 </p>

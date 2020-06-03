@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='django-find-apps',
-    version='2020.6.2',
+    version='2020.6.3',
     install_requires=[
         'public',
         'setuptools',

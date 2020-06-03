@@ -3,7 +3,6 @@ https://pypi.org/project/readme-generator/
 https://pypi.org/project/python-readme-generator/
 -->
 
-[![](https://img.shields.io/pypi/pyversions/django-find-apps.svg?longCache=True)](https://pypi.org/project/django-find-apps/)
 [![](https://img.shields.io/pypi/v/django-find-apps.svg?maxAge=3600)](https://pypi.org/project/django-find-apps/)
 [![](https://img.shields.io/badge/License-Unlicense-blue.svg?longCache=True)](https://unlicense.org/)
 [![Travis](https://api.travis-ci.org/andrewp-as-is/django-find-apps.py.svg?branch=master)](https://travis-ci.org/andrewp-as-is/django-find-apps.py/)
@@ -33,6 +32,10 @@ apps
     ├── __init__.py
     └── management
 ```
+
+#### Links
++   [django-configurations](https://github.com/jazzband/django-configurations)
++   [django-webpack-loader](https://github.com/owais/django-webpack-loader)
 
 <p align="center">
     <a href="https://pypi.org/project/python-readme-generator/">python-readme-generator</a>

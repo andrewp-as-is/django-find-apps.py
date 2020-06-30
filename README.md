@@ -1,13 +1,13 @@
 <!--
-https://pypi.org/project/readme-generator/
-https://pypi.org/project/python-readme-generator/
+https://readme42.com
 -->
+
 
 [![](https://img.shields.io/pypi/v/django-find-apps.svg?maxAge=3600)](https://pypi.org/project/django-find-apps/)
 [![](https://img.shields.io/badge/License-Unlicense-blue.svg?longCache=True)](https://unlicense.org/)
-[![Travis](https://api.travis-ci.org/andrewp-as-is/django-find-apps.py.svg?branch=master)](https://travis-ci.org/andrewp-as-is/django-find-apps.py/)
+[![](https://github.com/andrewp-as-is/django-find-apps.py/workflows/tests42/badge.svg)](https://github.com/andrewp-as-is/django-find-apps.py/actions)
 
-#### Installation
+### Installation
 ```bash
 $ [sudo] pip install django-find-apps
 ```
@@ -33,10 +33,6 @@ apps
     └── management
 ```
 
-#### Links
-+   [django-configurations](https://github.com/jazzband/django-configurations)
-+   [django-webpack-loader](https://github.com/owais/django-webpack-loader)
-
 <p align="center">
-    <a href="https://pypi.org/project/python-readme-generator/">python-readme-generator</a>
+    <a href="https://readme42.com/">readme42.com</a>
 </p>

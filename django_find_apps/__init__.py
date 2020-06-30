@@ -1,6 +1,7 @@
-#!/usr/bin/env python
+__all__ = ['find_apps']
+
+
 import os
-import public
 import setuptools
 
 """
@@ -23,8 +24,9 @@ APPS_DIRS = [
     'templatetags'
 ]
 
+
 def isapp(path):
-    if os.path.exists(os.path.join(path,'management','commands')):
+    if os.path.exists(os.path.join(path, 'management', 'commands')):
         return os.path.join(path)
     if not os.path.exists(os.path.join(path, '__init__.py')):
         return False
@@ -37,11 +39,11 @@ def isapp(path):
         if os.path.exists(fullpath) and os.path.isfile(fullpath):
             return True
 
-@public.add
+
 def find_apps(path):
     """return a list of apps"""
     apps = []
     for package in setuptools.find_packages(os.path.abspath(path)):
-        if isapp(os.path.join(path,package.replace('.',os.sep))):
+        if isapp(os.path.join(path, package.replace('.', os.sep))):
             apps.append(package)
     return apps
